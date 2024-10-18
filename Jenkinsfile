@@ -7,7 +7,7 @@ pipeline{
        stage('GetCode'){
             steps{
 				git branch: 'main',
-                url: 'https://github.com/ashokitschool/maven_web_app_jenkins_pipeline.git'
+                url: 'https://github.com/kpradeep710/maven_web_app_jenkins_pipeline.git'
             }
          }        
        stage('Build'){
