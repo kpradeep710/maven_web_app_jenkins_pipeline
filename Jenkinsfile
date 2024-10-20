@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                 git branch: 'main',
                 git url: 'https://github.com/kpradeep710/maven_web_app_jenkins_pipeline.git', credentialsId: "${GIT_CREDENTIALS_ID}"
             }
         }
