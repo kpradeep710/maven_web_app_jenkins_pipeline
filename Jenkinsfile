@@ -14,15 +14,15 @@ pipeline{
         stage('Build') {
             steps {
                 echo "build the maven project"
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo "connected to ec2-instance and ready to deploy"
-                sh '''
-                ssh -i C:/Documents/nani.pem target/01-maven-web-app.war ec2-user@65.0.12.242:/home/ec2-user/
+                bat '''
+                scp -i C:/Documents/nani.pem target/01-maven-web-app.war ec2-user@65.0.12.242:/home/ec2-user/
                 '''
             }
         }
