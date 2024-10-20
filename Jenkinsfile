@@ -22,7 +22,7 @@ pipeline{
             steps {
                 echo "connected to ec2-instance and ready to deploy"
                 sh '''
-                scp -i C:/Documents/nani.pem target/01-maven-web-app.war ec2-user@65.0.12.242:/home/ec2-user/
+                ssh -i C:/Documents/nani.pem target/01-maven-web-app.war ec2-user@65.0.12.242:/home/ec2-user/
                 '''
             }
         }
