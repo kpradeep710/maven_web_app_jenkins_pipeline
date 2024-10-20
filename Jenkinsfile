@@ -6,7 +6,7 @@ pipeline{
  stages {
         stage('clone repo') {
             steps {
-                git branch: 'master',
+                git branch: 'main',
                 url: 'https://github.com/kpradeep710/maven_web_app_jenkins_pipeline.git'
             }
         }
